@@ -23,7 +23,7 @@ class Deck
   @get: (id, callback) ->
     redis.hget 'Deck', id, (err, json) ->
         if json is null
-          callback new Error("Pie '#{id}' could not be found.")
+          callback new Error("Deck '#{id}' could not be found.")
         deck = new Deck JSON.parse(json)
         callback null, deck
 
