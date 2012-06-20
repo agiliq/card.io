@@ -3,7 +3,8 @@ require('coffee-script')
  * Module dependencies.
  */
 
-var express = require('express');
+var express = require('express'),
+    RedisStore = require('connect-redis')(express);
 
 var app = module.exports = express.createServer();
 
@@ -14,6 +15,11 @@ app.configure(function(){
   app.set('view engine', 'jade');
   app.use(express.bodyParser());
   app.use(express.methodOverride());
+  app.use(express.cookieParser());
+  app.use(express.session({
+    secret: "JustSomeRandomSecretKeyYouAreNeverGoingToGuess",
+    store: new RedisStore
+  }));
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
 });
