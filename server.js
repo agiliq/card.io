@@ -1,4 +1,4 @@
-
+require('coffee-script')
 /**
  * Module dependencies.
  */
