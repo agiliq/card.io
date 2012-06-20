@@ -1,3 +1,4 @@
+redis = require('redis').createClient()
 
 class Deck
 
@@ -25,3 +26,6 @@ class Deck
           callback new Error("Pie '#{id}' could not be found.")
         deck = new Deck JSON.parse(json)
         callback null, deck
+
+
+module.exports = Deck
