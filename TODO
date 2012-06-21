@@ -8,8 +8,8 @@ Player:
 
 Data:
 -----
-[ ] Card data
-[ ] Create sample cards
+[✔] Card data
+[✔] Create sample cards
 [ ] Render card data
 
 Network:

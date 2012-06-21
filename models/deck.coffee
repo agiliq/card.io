@@ -1,5 +1,7 @@
 redis = require('redis').createClient()
 
+log = () -> null
+
 class Deck
 
   constructor: (attributes) ->
@@ -8,7 +10,7 @@ class Deck
     if not @id and @name
       @id = @name.replace /\s/g, '-'
 
-  save: (callback) ->
+  save: (callback=log) ->
     redis.hset 'Deck', @id, JSON.stringify(@), (err, responseCode) =>
       callback null, @
 
