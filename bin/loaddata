@@ -12,14 +12,13 @@ deck = new Deck({
     'name': data.name
 })
 
-deck.save()
+f = (arg, obj) ->
+    for _card in data.cards
+        do (_card) ->
+            _card.deck = obj
+            card = new Card(_card)
+            card.save()
 
-for _card in data.cards
-  do (_card) ->
-    _card.deck = deck
-    card = new Card(_card)
-    card.save()
+deck.save(f)
 
 console.log "Saved deck #{deck.name} with #{data.cards.length} cards"
-
-process.exit()
