@@ -1,0 +1,65 @@
+{
+    'name': 'Planets',
+    'cards': [
+        {
+            'name': 'Mercury',
+            'playable_attrs': [
+                {'Distance from the Sun (km)': '57,909,227'},
+                {'Mean Equatorial Radius (km)':	'2,439.7'},
+                {'Volume (km3)':	'6.08272 x 1010'},
+                {'Mass (kg)':	'3.3010 x 1023'},
+                {'Density (g/cm3)':	'5.427'},
+                {'Equatorial Surface Gravity (m/s2)': '3.7'},
+                {'Escape Velocity (km/h)':	'15,300'},
+                {'Rotation Period (Earth days)':	'58.646'},
+                {'Orbit Period (Earth years)':	'0.2408467'},
+                {'Mean Orbit Velocity (km/h)':	'170,503'},
+                {'Orbit Eccentricity':	'0.20563593'},
+                {'Orbit Inclination to Ecliptic':	'7.0°'},
+                {'Inclination of Equator to Orbit':	'0°'},
+                {'Moons':	'0'},
+                {'Rings':	'No'}
+            ]
+        },
+        {
+            'name': 'Venus',
+            'playable_attrs': [
+                {'Distance from the Sun (km)': '108,209,475'},
+                {'Mean Equatorial Radius (km)':	'6,051.8'},
+                {'Volume (km3)':	'9.28415 x 1011'},
+                {'Mass (kg)':	'4.8673 x 1024'},
+                {'Density (g/cm3)':	'5.243'},
+                {'Equatorial Surface Gravity (m/s2)': '8.87'},
+                {'Escape Velocity (km/h)':	'37,296'},
+                {'Rotation Period (Earth days)':	'-243.018'},
+                {'Orbit Period (Earth years)':	'0.61519726'},
+                {'Mean Orbit Velocity (km/h)':	'126,074'},
+                {'Orbit Eccentricity':	'0.00677672'},
+                {'Orbit Inclination to Ecliptic':	'3.39°'},
+                {'Inclination of Equator to Orbit':	'177.3°'},
+                {'Moons':	'0'},
+                {'Rings':	'No'}
+            ]
+        },
+        {
+            'name': 'Earth',
+            'playable_attrs': [
+                {'Distance from the Sun (km)': '149,598,262'},
+                {'Mean Equatorial Radius (km)':	'6,371.00'},
+                {'Volume (km3)':	'1.08321 x 1012'},
+                {'Mass (kg)':	'5.9722 x 1024'},
+                {'Density (g/cm3)':	'5.513'},
+                {'Equatorial Surface Gravity (m/s2)': '9.80665'},
+                {'Escape Velocity (km/h)':	'40,284'},
+                {'Rotation Period (Earth days)':	'0.99726968'},
+                {'Orbit Period (Earth years)':	'1.0000174'},
+                {'Mean Orbit Velocity (km/h)':	'107,218'},
+                {'Orbit Eccentricity':	'0.01671123'},
+                {'Orbit Inclination to Ecliptic':	'0.00005°'},
+                {'Inclination of Equator to Orbit':	'23.4393°'},
+                {'Moons':	'1'},
+                {'Rings':	'No'}
+            ]
+        }
+    ]
+}
