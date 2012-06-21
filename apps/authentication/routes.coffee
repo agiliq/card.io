@@ -2,7 +2,7 @@ routes = (app) ->
 
   app.get '/', (req, res) ->
     if not req.session.currentUser
-      res.redirecet '/login'
+      res.redirect '/login'
     res.redirect '/cards'
 
   app.get '/login', (req, res) ->

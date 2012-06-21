@@ -1,10 +1,18 @@
-[ ] User nick selection
+Player:
+-------
+[✔] User nick selection
+[ ] Handle user turn
+[ ] Shuffle and deal cards
+[ ] Toss to start
+[ ] Value comparision
+
+Data:
+-----
 [ ] Card data
+[ ] Create sample cards
+[ ] Render card data
+
+Network:
+--------
 [ ] Add socket.io to project
 [ ] Push notifications for game play
-[ ] Render card data
-[ ] Shuffle and deal cards
-[ ] Create sample cards
-[ ] Handle user turn
-[ ] Toss to start
-[ ] Value comparision 
