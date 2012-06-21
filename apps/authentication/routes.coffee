@@ -1,9 +1,11 @@
+Deck = require '../../models/deck'
+
 routes = (app) ->
 
   app.get '/', (req, res) ->
     if not req.session.currentUser
       res.redirect '/login'
-    res.redirect '/cards'
+    res.redirect '/welcome'
 
   app.get '/login', (req, res) ->
     if req.session.currentUser
@@ -14,7 +16,7 @@ routes = (app) ->
   app.post '/login', (req, res) ->
     if req.body.nick
       req.session.currentUser = req.body.nick
-      res.redirect '/cards'
+      res.redirect '/welcome'
       return
     req.redirect '/login'
 
@@ -22,7 +24,18 @@ routes = (app) ->
     req.session.regenerate (err) ->
       res.redirect '/login'
 
-  app.get '/cards', (req, res) ->
-    res.end "Hello #{req.session.currentUser}"
+  app.get '/welcome', (req, res) ->
+    if not req.session.currentUser
+      res.redirect '/login'
+    Deck.all (err, decks) ->
+      res.render "#{__dirname}/views/welcome",
+        title: 'Welcome'
+        user: req.session.currentUser
+        decks: decks
+
+  app.get '/game', (req, res) ->
+    if not req.session.currentUser
+      res.redirect '/login'
+    res.end 'start!'
 
 module.exports = routes

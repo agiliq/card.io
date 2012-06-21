@@ -1,0 +1,9 @@
+h3
+  |Hello #{user}
+
+h4
+  |Choose a deck to get started
+p
+  for deck in decks
+    a(href="/game?deck=#{deck.name}")
+      |#{deck.name}
