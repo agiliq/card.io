@@ -24,3 +24,6 @@ module.exports = (app) ->
     Deck.get req.params.id, (err, deck) ->
       res.render "#{__dirname}/views/deck",
         title: deck.name
+
+  app.get '/admin/decks/:id/cards', (req, res) ->
+    res.end "Show cards"
