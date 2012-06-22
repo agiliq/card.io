@@ -3,9 +3,9 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="/javascripts/jquery-1.7.2.min.js")
+    script(src="/socket.io/socket.io.js")
+    script(src="/javascripts/application.js")
   body
     h1= title
     != body
-
-    script(src="/socket.io/socket.io.js")
-    script(src="/javascripts/application.js")
