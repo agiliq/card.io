@@ -10,9 +10,9 @@ Data:
 -----
 [✔] Card data
 [✔] Create sample cards
-[ ] Render card data
+[✔] Render card data
 
 Network:
 --------
-[ ] Add socket.io to project
-[ ] Push notifications for game play
+[✔] Add socket.io to project
+[✔] Push notifications for game play
