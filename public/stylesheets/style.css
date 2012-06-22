@@ -6,3 +6,28 @@ body {
 a {
   color: #00B7FF;
 }
+
+.card {
+  width: 200px;
+  padding: 25px 10px;
+  float: left;
+}
+.card ul {
+  margin: 0;
+  padding: 0;
+}
+.card li {
+  list-style: none;
+  margin: 0 0;
+}
+.card ul li span.key {
+  display: block;
+  float: left;
+  width: 80px;
+}
+.card ul li span.value {
+  display: block;
+  float: left;
+  text-align: right;
+  width: 60px;
+}

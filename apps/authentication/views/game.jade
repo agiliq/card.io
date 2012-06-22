@@ -4,7 +4,16 @@ h3
 h4
   |Here are the cards in this deck
 
-ul
-  for card in cards
-    li
-      |#{card.name}
+each card in cards
+  div(class="card") 
+   h5= card.name
+   ul
+     each attr in card.playable_attrs
+       each val, key in attr
+         li
+           span(class="key") 
+             | #{key}
+           span(class="value")
+             | #{val}
+
+         
