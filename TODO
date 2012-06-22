@@ -16,7 +16,7 @@ Network:
 Gameplay:
 ---------
 [ ] Handle seperation of game sockets
-[ ] Users joining (others get notified)
+[✔] Users joining (others get notified)
 [ ] Start the game already
 [ ] Deal num(cards)/n(players) cards to each
 [ ] Execture toss
