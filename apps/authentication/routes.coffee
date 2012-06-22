@@ -47,5 +47,6 @@ routes = (app) ->
           title: 'Start!'
           user: req.session.currentUser
           cards: cards
+          deck: deck
 
 module.exports = routes
