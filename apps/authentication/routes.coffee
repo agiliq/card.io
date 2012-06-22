@@ -1,4 +1,5 @@
 Deck = require '../../models/deck'
+Card = require '../../models/card'
 
 routes = (app) ->
 
@@ -33,9 +34,16 @@ routes = (app) ->
         user: req.session.currentUser
         decks: decks
 
-  app.get '/game', (req, res) ->
+
+  app.get '/game/:name', (req, res) ->
     if not req.session.currentUser
       res.redirect '/login'
-    res.end 'start!'
+    Deck.get req.params.name, (err, deck) ->
+      Card.all (err, cards) ->
+        cards = cards.filter (i) -> i.deck.name == deck.name
+        res.render "#{__dirname}/views/game",
+          title: 'Start!'
+          user: req.session.currentUser
+          cards: cards
 
 module.exports = routes
