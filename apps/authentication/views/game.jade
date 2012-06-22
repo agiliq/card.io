@@ -42,24 +42,22 @@ script
   $(function () {
     socket.emit('nickname', nick, function (set) {
       if (!set) {
-        clear();
         return $('#chat').addClass('nickname-set');
       }
       $('#nickname-err').css('visibility', 'visible');
     });
 
-    $('#send-message').submit(function () {
-      message('me', $('#message').val());
-      socket.emit('user message', $('#message').val());
-      clear();
-      $('#lines').get(0).scrollTop = 10000000;
-      return false;
-    });
-
-    function clear () {
-      $('#message').val('').focus();
-    };
   });
+
+  var App = {
+    send_message: function (msg) {
+
+      message('me', msg);
+      socket.emit('user message', msg);
+      return false;
+    }
+  };
+
 body
 #chat
   #connecting
