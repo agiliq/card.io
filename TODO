@@ -1,10 +1,6 @@
 Player:
 -------
 [✔] User nick selection
-[ ] Handle user turn
-[ ] Shuffle and deal cards
-[ ] Toss to start
-[ ] Value comparision
 
 Data:
 -----
@@ -16,3 +12,19 @@ Network:
 --------
 [✔] Add socket.io to project
 [✔] Push notifications for game play
+
+Gameplay:
+---------
+[ ] Handle seperation of game sockets
+[ ] Users joining (others get notified)
+[ ] Start the game already
+[ ] Deal num(cards)/n(players) cards to each
+[ ] Execture toss
+[ ] Give control to player winning toss
+[ ] Show/Hide cards
+[ ] Handle user play/move
+[ ] Broadcast a user's play to all
+[ ] Show everybody's card
+[ ] Show winner for this round
+[ ] Move all loser cards to winner
+[ ] Give control to winner
