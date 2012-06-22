@@ -10,7 +10,9 @@ routes = (app) ->
 
   app.get '/login', (req, res) ->
     if req.session.currentUser
-      res.end '<a href="/logout">Logout</a>'
+      res.render "#{__dirname}/views/logout",
+        title: 'Logout'
+        user: req.session.currentUser
     res.render "#{__dirname}/views/login",
       title: 'Login'
 
